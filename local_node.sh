@@ -362,4 +362,8 @@ evmd start "$TRACE" \
 	--evm.min-tip=0 \
 	--home "$CHAINDIR" \
 	--json-rpc.api eth,txpool,personal,net,debug,web3 \
-	--chain-id "$CHAINID"
+	--chain-id "$CHAINID" \
+	--api.enabled-unsafe-cors=true \
+	--json-rpc.address 0.0.0.0:8545 \
+	--rpc.laddr tcp://0.0.0.0:26657 \
+	--api.address tcp://0.0.0.0:1317
